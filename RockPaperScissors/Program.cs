@@ -8,6 +8,7 @@ namespace RockPaperScissors
         {
             //GettingInfoFirstPlayer
             Console.WriteLine(GettingInfoFromPlayer());
+            Console.WriteLine(RandomComputerAnswer());
         }
         static string GettingInfoFromPlayer()
         {
@@ -34,14 +35,21 @@ namespace RockPaperScissors
             {
                 case 0:
                     return "rock";
-                    break;
                 case 1:
                     return "paper";
-                    break;
                 case 2:
                     return "scissors";
-                    break;
+                default:
+                    return RandomComputerAnswer();
             }
+        }
+        static void WhoWillWin(string playerAnswer, string computerAnswer)
+        {
+            if (playerAnswer == computerAnswer)
+            {
+                Console.WriteLine("DRAW!");
+            }
+            
         }
 
     }
